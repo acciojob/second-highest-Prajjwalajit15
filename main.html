@@ -1,47 +1,46 @@
 <!DOCTYPE html>
 
 <html>
+<!DOCTYPE html>
+<html>
 
 <head>
-	<link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="styles.css">
 </head>
 
-<body>	
-	<script>
-		function secondHighest(arr) {
-			 function secondHighest(arr) {
-  if (arr.length <= 1) {
-    return -Infinity;
-  }
+<body>
+  <script>
+    function secondHighest(arr) {
+      if (arr.length <= 1) {
+        return -Infinity;
+      }
 
-  // Remove duplicates from the array
-  const uniqueArr = [...new Set(arr)];
+      // Remove duplicates from the array
+      const uniqueArr = [...new Set(arr)];
 
-  if (uniqueArr.length <= 1) {
-    return -Infinity;
-  }
+      if (uniqueArr.length <= 1) {
+        return -Infinity;
+      }
 
-  // Sort the unique array in descending order
-  const sortedArr = uniqueArr.sort((a, b) => b - a);
+      // Sort the unique array in descending order
+      const sortedArr = uniqueArr.sort((a, b) => b - a);
 
-  // The second-highest element will be at index 1
-  return sortedArr[1];
-} 
-		}
+      // The second-highest element will be at index 1
+      return sortedArr[1];
+    }
 
-		function Main() {
-			var n = prompt("Enter the number of elements");
-			var arr = [];
-			for (var i = 0; i < n; i++) {
-				arr[i] = prompt("Enter element " + (i+1));
-			}
-			alert(secondHighest(arr));
-		}
-		Main();
-	</script>
+    function Main() {
+      var n = prompt("Enter the number of elements");
+      var arr = [];
+      for (var i = 0; i < n; i++) {
+        arr[i] = prompt("Enter element " + (i + 1));
+      }
+      alert(secondHighest(arr));
+    }
+    Main();
+  </script>
 
-    <script type="text/javascript" src="./script.js">
-</script>
+  <script type="text/javascript" src="./script.js"></script>
 
 </body>
 
